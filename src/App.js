@@ -15,6 +15,7 @@ function App() {
 
 
 
+
 function ExterUsers(){
 
 
@@ -26,15 +27,33 @@ useEffect(()=>{
 
   fetch('https://jsonplaceholder.typicode.com/users')
   .then(res=>res.json())
-  .then(data=>console.log(data))
+  .then(data=>setUsers(data))
 },[])
 
   return(
 
     <div>
       <h2>External Users</h2>
+      <p>{users.length}</p>
+      {
+        users.map(user=><User name={user.name} email={user.email} ></User>)
+      }
     </div>
   )
+}
+
+
+
+function User (props){
+
+  return(
+
+    <div className='dataAPI'>
+      <h3>name: {props.name}</h3>
+      <p>Email: {props.email}</p>
+    </div>
+  )
+
 }
 
 function Counter(){

@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.dataAPI{
+  border: 1px solid gray;
+  margin: 200px;
+  border-radius: 20px;
+  box-shadow: 20px;
+  background-color: yellowgreen;
+  padding: 20px;
+}
